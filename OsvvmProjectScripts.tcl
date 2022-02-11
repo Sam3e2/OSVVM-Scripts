@@ -671,7 +671,7 @@ proc analyze {FileName {OptionalCommands ""}} {
 
   if {$FileExtension eq ".vhd" || $FileExtension eq ".vhdl"} {
     vendor_analyze_vhdl ${VHDL_WORKING_LIBRARY} ${NormFileName} ${OptionalCommands}
-  } elseif {$FileExtension eq ".v"} {
+  } elseif {$FileExtension eq ".v" || $FileExtension eq ".sv"} {
     vendor_analyze_verilog ${VHDL_WORKING_LIBRARY} ${NormFileName} ${OptionalCommands}
   } elseif {$FileExtension eq ".lib"} {
     #  for handling older deprecated file format
